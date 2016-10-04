@@ -1,0 +1,35 @@
+// store.scss [manifest]
+//
+// @import any files requires for the customer application below
+//
+// Why aren't we using Sprockets directives here anymore?
+//
+// From the Rails docs:
+//
+// If you want to use multiple Sass files, you should generally use the Sass @import rule
+// instead of Sprockets directives. When using Sprockets directives, Sass files exist
+// within their own scope, making variables or mixins only available within the document
+// they were defined in.
+//
+// Also see: https://github.com/rails/sass-rails#important-note
+//
+//
+// ---------------------------------------------- Vendor
+//
+//
+@import 'bootstrap';
+//
+//
+// ---------------------------------------------- Lib
+//
+//
+@import 'mixins';
+//
+//
+// ---------------------------------------------- App
+//
+//
+@import 'shared/config/constants';
+@import 'store/config/constants';
+@import 'shared/**/*';
+@import 'store/**/*';

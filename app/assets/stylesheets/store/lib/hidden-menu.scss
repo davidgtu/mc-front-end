@@ -1,0 +1,40 @@
+// scss-lint:disable SelectorDepth
+//
+// SelectorDepth is disabled because Bootstrap itself has selectors with depth > 3, thus we must
+// do the same to have a higher specificity without resorting to !important
+//
+// Hide the global menu (except for the CS phone number)
+//
+// This is used in the cart and during checkout
+//
+@mixin hidden-menu {
+  menu {
+    margin-top: -$menu-height-desktop;
+    z-index: 900; // below header
+  }
+
+  menu .nav-phone-number {
+    position: absolute;
+    top: -($header-height-desktop - $menu-height-desktop) / 2;
+    right: 150px;
+    z-index: 1010; // above header
+  }
+
+  &[data-logged-in="true"] menu .nav-phone-number {
+    right: 40px;
+  }
+
+  menu .nav-phone-number > a {
+    font-size: 20px;
+    font-weight: normal;
+
+    &:hover {
+      background: $mc-grey-2; // same as header
+    }
+  }
+
+  menu .nav-phone-number > a > i {
+    top: -2px;
+    font-size: 28px;
+  }
+}

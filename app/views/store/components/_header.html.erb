@@ -1,0 +1,22 @@
+<header>
+  <nav class="navbar navbar-static-top">
+    <button class="menu-toggle collapsed" data-js-hook="menu-toggle">
+      <span class="menu-toggle-bar menu-toggle-bar-top"></span>
+      <span class="menu-toggle-bar menu-toggle-bar-middle"></span>
+      <span class="menu-toggle-bar menu-toggle-bar-bottom"></span>
+    </button>
+
+    <div class="container gutter-sm-15 gutter-md-40">
+      <div class="navbar-nameplate clearfix">
+        <a class="navbar-brand" href="<%= root_url %>">
+          <%= image_tag 'shared/logos/logo-white-300x123.png', class: 'mc-logo' %>
+        </a>
+        <%= content_tag(:div, content_for(:navbar_title), class: 'navbar-title') if content_for? :navbar_title %>
+      </div>
+
+      <ul class="nav">
+        <li class="nav-cart">Cart</li>
+      </ul>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,90 @@
+// ---------------------------------------------- Layout
+
+$container-horizontal-padding: 15px;
+$container-max-width: 1265px;
+
+$max-mobile-width: 767px;
+$min-tablet-width: 768px;
+$max-tablet-width: 991px;
+$min-desktop-width: 992px;
+
+// ---------------------------------------------- Typography
+
+$mc-h1-font-size: 36px;
+$mc-h2-font-size: 24px;
+$mc-h3-font-size: 22px;
+$mc-h4-font-size: 20px;
+$mc-h5-font-size: 18px;
+$mc-h6-font-size: 16px;
+$mc-p-font-size: 16px;
+$mc-p-line-height: 22px;
+
+$mc-text-color: #292929 !default;
+$mc-text-color-muted: #898989 !default;
+
+$mc-nexa-slab: 'Nexa Rust Slab', Flama, 'Helvetica Neue', Helvetica, sans-serif;
+$mc-nexa-script: 'Nexa Rust Script', Flama, 'Helvetica Neue', Helvetica, sans-serif;
+
+// ---------------------------------------------- Colors
+
+$mc-black: #000000 !default;
+$mc-grey-1: #191919 !default;
+$mc-grey-2: #292929 !default;
+$mc-grey-3: #393939 !default;
+$mc-grey-4: #494949 !default;
+$mc-grey-5: #595959 !default;
+$mc-grey-6: #696969 !default;
+$mc-grey-7: #797979 !default;
+$mc-grey-8: #898989 !default;
+$mc-grey-9: #999999 !default;
+$mc-grey-a: #A9A9A9 !default;
+$mc-grey-b: #B9B9B9 !default;
+$mc-grey-c: #C9C9C9 !default;
+$mc-grey-d: #D9D9D9 !default;
+$mc-grey-e: #E9E9E9 !default;
+$mc-grey-f: #F9F9F9 !default;
+$mc-white: #FFFFFF !default;
+
+$mc-red: #E3261F !default;
+$mc-orange: #F78700 !default;
+$mc-yellow: #FBD548 !default;
+$mc-green-light: #AEC756 !default;
+$mc-green-medium: #82953A !default;
+$mc-green-dark: #4E5A26 !default;
+$mc-blue-light: #89BFFF !default;
+$mc-blue-medium: #468EE5 !default;
+$mc-blue-dark: #2A60A4 !default;
+$mc-purple: #804EFF !default;
+
+// ---------------------------------------------- Components
+
+// -- Buttons
+
+$mc-btn-border-radius: 2px !default;
+
+$mc-btn-primary-bg: #F78700 !default;
+$mc-btn-primary-color: $mc-white !default;
+$mc-btn-primary-hover-bg: lighten($mc-btn-primary-bg, 10%);
+$mc-btn-primary-active-bg: lighten($mc-btn-primary-bg, 15%);
+
+$mc-btn-secondary-bg: #AEC756 !default;
+$mc-btn-secondary-color: #4E5A26 !default;
+$mc-btn-secondary-hover-bg: lighten($mc-btn-secondary-bg, 10%);
+$mc-btn-secondary-active-bg: lighten($mc-btn-secondary-bg, 15%);
+
+$mc-btn-tertiary-bg: #D6D6D6 !default;
+$mc-btn-tertiary-color: #5A5A5A !default;
+$mc-btn-tertiary-hover-bg: darken($mc-btn-tertiary-bg, 10%);
+$mc-btn-tertiary-active-bg: darken($mc-btn-tertiary-bg, 15%);
+
+// -- Prices
+
+$mc-price-color: #BB2B00 !default;
+
+// -- Snipes
+
+$mc-snipe-bg: #1F86FF !default;
+$mc-snipe-color: #FFFFFF !default;
+
+// -- Shadowbox
+$mc-shadowbox-color: rgba(0, 0, 0, 0.6);

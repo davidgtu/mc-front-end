@@ -1,0 +1,208 @@
+// scss-lint:disable SelectorDepth
+//
+// SelectorDepth is disabled because Bootstrap itself has selectors with depth > 3, thus we must
+// do the same to have a higher specificity without resorting to !important
+
+footer {
+  color: $mc-white;
+  background: $mc-grey-2;
+}
+
+footer .nav {
+  margin: 0 0 60px 0;
+  padding: 0;
+}
+
+footer .nav > li > a {
+  display: inline-block;
+  padding: 10px 0;
+  color: $mc-white;
+}
+
+footer .nav > li > a:hover {
+  background: $mc-grey-2;
+  text-decoration: underline;
+}
+
+.footer-cta {
+  margin-bottom: 40px;
+}
+
+.footer-cta > .btn {
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+.footer-cta > p {
+  font-size: 13px;
+  margin: 0;
+  color: $mc-grey-a;
+  text-align: left;
+}
+
+footer .mc-logo {
+  display: block;
+  height: 42px;
+  margin: 0 auto;
+}
+
+footer .social {
+  margin-bottom: 40px;
+}
+
+footer .social-icon-link > i {
+  color: $mc-white;
+}
+
+footer .social-icon-link:hover > i {
+  color: $mc-orange;
+}
+
+footer .legal {
+  font-size: 14px;
+  text-align: center;
+}
+
+footer .legal > a {
+  color: $mc-white;
+}
+
+@include media(tablet) {
+
+  footer .mc-logo {
+    margin: 0;
+  }
+
+}
+
+@include media(desktop) {
+
+  .footer-cta {
+    height: 80px;
+  }
+
+  footer .mc-logo {
+    margin: 0;
+  }
+
+  footer .legal {
+    height: 58px;
+    line-height: 58px;
+    text-align: left;
+  }
+
+  footer .social {
+    float: left;
+    margin: 0 0 0 -20px;
+  }
+
+}
+
+// -- Guarantee --
+
+.guarantee {
+  background-image: url(image-path('store/components/hero-backgrounds/satisfaction-guaranteed-1440x300.png'));
+}
+
+@include media(mobile) {
+
+  .guarantee {
+    background: $mc-grey-2;
+  }
+
+  .guarantee > .billboard-content {
+    top: 42px;
+    padding: 0 15px;
+  }
+
+  .guarantee .billboard-headline {
+    margin-bottom: 25px;
+    font-size: 24px;
+  }
+
+  .guarantee .btn {
+    display: block;
+    margin: 0 auto;
+  }
+
+}
+
+@include media(tablet) {
+
+  .guarantee > .billboard-content {
+    padding-top: 72px;
+  }
+
+  .guarantee .billboard-headline {
+    margin-bottom: 30px;
+    font-size: 32px;
+  }
+
+}
+
+@include media(desktop) {
+
+  .guarantee > .billboard-content {
+    padding-top: 98px;
+  }
+
+  .guarantee .billboard-headline {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+
+}
+
+// -- Wise Guy --
+
+.wise-guy {
+  background-image: url(image-path('store/components/hero-backgrounds/wise-guy-a-1440x300.png'));
+}
+
+.wise-guy .billboard-headline {
+  letter-spacing: -1px;
+}
+
+.wise-guy .billboard-headline > span {
+  color: $mc-orange;
+}
+
+@include media(mobile) {
+
+  // don't show wise-guy on mobile for performance (avoid loading another large image)
+  // NB: hiding isn't enough, must null out background image to ensure the browser doesn't load it
+  .wise-guy {
+    display: none;
+    background: none;
+  }
+
+}
+
+@include media(tablet) {
+
+  .wise-guy > .billboard-content {
+    padding: 83px 80px;
+  }
+
+  .wise-guy .billboard-headline {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+}
+
+@include media(desktop) {
+
+  .wise-guy > .billboard-content {
+    padding: 40px 120px;
+  }
+
+  .wise-guy .billboard-headline {
+    top: 30px;
+    max-width: 835px;
+    margin: 0 auto;
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+}

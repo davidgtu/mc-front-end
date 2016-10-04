@@ -1,0 +1,112 @@
+//--  Form Groups  --
+
+.form-group label {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-group .form-control {
+  position: relative;
+  height: 40px;
+  font-size: 16px;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid $mc-grey-e;
+  border-radius: 0;
+}
+
+.form-group .form-control:focus {
+  border-bottom: 2px solid $mc-blue-medium;
+}
+
+.form-group input {
+  padding: 0 10px;
+}
+
+.form-group .field-with-errors .form-control {
+  border-bottom: 2px solid $mc-red !important;
+}
+
+.form-group .field-with-errors .field-error {
+  font-weight: normal;
+}
+
+.form-group.form-group-required .control-label::after {
+  content: '*';
+  color: $mc-orange;
+  position: absolute;
+  padding-left: 2px;
+}
+
+//--  Form Actions  --
+
+.form-actions {
+  @include clearfix();
+  margin: 30px 0 0 0;
+  padding: 30px 0 0 0;
+  border-top: 1px solid $mc-grey-e;
+}
+
+.form-actions .btn-group > .btn + .btn {
+  margin-left: 10px;
+}
+
+
+//--  Form Errors  --
+
+.form-errors-summary {
+  margin: 0 0 15px 0;
+}
+
+.form-error-list {
+  margin: 0 0 15px 15px;
+  padding: 0;
+}
+
+.form-error-list:last-child {
+  margin-bottom: 0;
+}
+
+.form-error-list > li {
+  margin: 0 0 5px 0;
+  padding: 0;
+  font-weight: bold;
+}
+
+.form-error-list > li:last-child {
+  margin-bottom: 0;
+}
+
+//--  Field Errors  --
+
+.field-error-list {
+  margin: 10px 0 20px 18px;
+  padding: 0;
+}
+
+.field-error-list > li {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: $mc-red;
+}
+
+.field-error-list > li:last-child {
+  margin-bottom: 0;
+}
+
+.field-error {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: $mc-red;
+}
+
+@media (min-width: $min-tablet-width) {
+
+  .form-errors {
+    margin: 20px auto;
+  }
+
+}

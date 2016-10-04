@@ -1,0 +1,77 @@
+.hero {
+  position: relative;
+  background-attachment: scroll;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.hero-headline {
+  font-family: $mc-nexa-slab;
+  color: $mc-white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hero-sub-headline {
+  color: $mc-white;
+  text-align: center;
+}
+
+@include media(mobile) {
+
+  .hero {
+    padding: 20px;
+  }
+
+  .hero-headline {
+    margin: 0 0 20px 0;
+    font-size: 30px;
+  }
+
+  .hero-sub-headline {
+    font-size: 24px;
+  }
+
+  .btn-hero-cta {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+@include media(tablet) {
+
+  .hero {
+    padding: 40px;
+  }
+
+  .hero-headline {
+    margin: 0 0 40px 0;
+    font-size: 50px;
+  }
+
+  .hero-sub-headline {
+    font-size: 28px;
+  }
+
+}
+
+@include media(desktop) {
+
+  .hero {
+    padding: 60px;
+  }
+
+  .hero-headline {
+    margin: 0 0 60px 0;
+    font-size: 66px;
+  }
+
+  .hero-sub-headline {
+    font-size: 32px;
+  }
+
+}

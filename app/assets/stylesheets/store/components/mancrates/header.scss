@@ -1,0 +1,236 @@
+// scss-lint:disable SelectorDepth
+//
+// SelectorDepth is disabled because Bootstrap itself has selectors with depth > 3, thus we must
+// do the same to have a higher specificity without resorting to !important
+
+$header-height-desktop: 71px;
+$header-height-mobile: 51px;
+$header-nav-height-desktop: 40px;
+$logo-height-mobile: 30px;
+$logo-height-desktop: 40px;
+
+header {
+  text-align: center;
+  z-index: 1000;
+}
+
+header .navbar {
+  min-height: $header-height-mobile;
+  margin: 0;
+  background-color: $mc-grey-2;
+  border-bottom: none;
+}
+
+// -- Toggle --
+
+header .menu-toggle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 15px;
+  background: transparent;
+  border: none;
+  outline: none;
+  z-index: 2000; // so it's above header
+
+  &:hover {
+    background: transparent;
+  }
+
+  &.collapsed {
+
+    .menu-toggle-bar-top {
+      transform: rotate(0deg);
+    }
+
+    .menu-toggle-bar-middle {
+      opacity: 1;
+    }
+
+    .menu-toggle-bar-bottom {
+      transform: rotate(0deg);
+    }
+  }
+}
+
+header .menu-toggle-bar {
+  @include transition(all 100ms ease-out);
+  display: block;
+  width: 22px;
+  height: 3px;
+  margin: 3px;
+  background: $mc-white;
+}
+
+header .menu-toggle-bar-top {
+  transform: rotate(45deg);
+  transform-origin: 10% 10%;
+}
+
+header .menu-toggle-bar-middle {
+  opacity: 0;
+}
+
+header .menu-toggle-bar-bottom {
+  transform: rotate(-45deg);
+  transform-origin: 10% 90%;
+}
+
+// -- Nameplate --
+
+header .navbar-nameplate {
+  display: inline-block;
+  margin-top: ($header-height-mobile - $logo-height-mobile) / 2;
+}
+
+header .navbar-nameplate > .navbar-brand {
+  display: inline-block;
+  float: left;
+  height: $logo-height-mobile;
+  padding: 0;
+  line-height: $logo-height-mobile;
+}
+
+header .navbar-nameplate > .navbar-brand > img {
+  height: $logo-height-mobile;
+}
+
+header .navbar-nameplate > .navbar-title {
+  display: block;
+  float: left;
+  height: $logo-height-mobile;
+  margin: 0 0 0 10px;
+  color: $mc-grey-e;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+// -- Nav --
+
+header .nav {
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+
+header .nav > li > a {
+  @include transition(background 150ms ease-out, color 150ms ease-out);
+  display: block;
+  height: $header-height-mobile;
+  background: $mc-grey-2;
+  color: $mc-white;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: $header-height-mobile;
+  text-transform: uppercase;
+}
+
+header .nav > li > a > i {
+  position: relative;
+  top: -1px;
+  margin: 0 5px 0 0;
+}
+
+header .nav > li > a:hover {
+  background: $mc-grey-3;
+  text-decoration: none;
+}
+
+header .nav > .nav-log-in,
+header .nav > .nav-account,
+header .nav > .nav-sign-up {
+  display: none;
+}
+
+header .nav > .nav-cart {
+  margin-right: -15px;
+}
+
+header .nav > .nav-cart > a {
+  line-height: 30px;
+}
+
+@include media(desktop) {
+
+  header {
+    text-align: left;
+  }
+
+  header .navbar {
+    min-height: $header-height-desktop;
+  }
+
+  header .menu-toggle {
+    display: none;
+  }
+
+  // -- Nameplate --
+
+  header .navbar-nameplate {
+    float: left;
+    margin: 15px 0 !important;
+  }
+
+  header .navbar-nameplate > .navbar-brand {
+    height: $logo-height-desktop;
+    margin: 0 !important;
+  }
+
+  header .navbar-nameplate > .navbar-brand > img {
+    height: $logo-height-desktop;
+  }
+
+  header .navbar-nameplate > .navbar-title {
+    height: $logo-height-desktop;
+    margin-left: 15px;
+    font-size: 24px;
+    line-height: $logo-height-desktop;
+  }
+
+  // -- Nav --
+
+  header .nav {
+    float: right;
+    position: relative;
+    height: $header-nav-height-desktop;
+    top: 15px;
+    right: auto;
+  }
+
+  header .nav > li {
+    float: left;
+    height: $header-nav-height-desktop;
+  }
+
+  header .nav > li > a {
+    height: $header-nav-height-desktop;
+    padding: 0 20px;
+    line-height: $header-nav-height-desktop;
+    background: $mc-grey-4;
+  }
+
+  header .nav > .nav-sign-up {
+    margin: 0 10px 0 0;
+    border-left: 1px solid lighten($mc-grey-4, 5%);
+  }
+
+  header .nav > .nav-account {
+    margin: 0 10px 0 0;
+  }
+
+  header .nav > .nav-cart {
+    margin-right: 0;
+  }
+
+  header .nav > .nav-cart > a {
+    line-height: 40px;
+  }
+
+  header .nav > .nav-log-in,
+  header .nav > .nav-account,
+  header .nav > .nav-sign-up {
+    display: block;
+  }
+
+}

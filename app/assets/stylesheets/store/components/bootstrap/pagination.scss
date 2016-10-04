@@ -1,0 +1,29 @@
+.pagination {
+  margin: 0;
+  padding: 0;
+}
+
+.pagination .page,
+.pagination .next,
+.pagination .prev,
+.pagination .first,
+.pagination .last {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 10px;
+  background: $mc-white;
+  text-align: center;
+  border: 1px solid $mc-grey-e;
+
+  &:hover {
+    cursor: pointer;
+    background: $mc-grey-e;
+  }
+}
+
+.page-entries {
+  font-size: 14px;
+  line-height: 40px;
+  margin: 0;
+  color: $mc-grey-3;
+}

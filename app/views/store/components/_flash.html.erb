@@ -1,0 +1,38 @@
+<% if flash[:notice] %>
+    <div class="flash">
+      <div class="alert alert-success">
+        <div class="alert-icon">
+          <i class="material-icons">check_circle</i>
+        </div>
+        <div class="alert-description">
+          <p><%= flash[:notice] %></p>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<% if flash[:warning] %>
+    <div class="flash">
+      <div class="alert alert-warning">
+        <div class="alert-icon">
+          <i class="material-icons">warning</i>
+        </div>
+        <div class="alert-description">
+          <p><%= flash[:warning] %></p>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<% if flash[:error] %>
+    <div class="flash">
+      <div class="alert alert-error">
+        <div class="alert-icon">
+          <i class="material-icons">error</i>
+        </div>
+        <div class="alert-description">
+          <p><%= flash[:error] %></p>
+        </div>
+      </div>
+    </div>
+<% end %>

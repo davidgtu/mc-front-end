@@ -1,0 +1,64 @@
+.panel {
+  margin-bottom: 30px;
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid $mc-grey-e;
+}
+
+.panel-heading {
+  @include clearfix();
+  padding: 30px;
+  background: $mc-grey-f;
+  border-bottom: 1px solid $mc-grey-e;
+  border-radius: 0;
+}
+
+.panel-heading .panel-title {
+  float: left;
+  font-size: $mc-h3-font-size;
+  font-weight: bold;
+}
+
+.panel-heading .panel-meta {
+  clear: both;
+  padding-top: 5px;
+  font-size: $mc-p-font-size * 0.9;
+  color: $mc-grey-6;
+}
+
+.panel-heading .btn-group {
+  float: right;
+}
+
+.panel-heading .btn-group .btn-primary,
+.panel-heading .btn-group .btn-secondary {
+  margin-left: 10px !important;
+}
+
+.panel-body {
+  padding: 30px;
+}
+
+.panel-body > .blank-state {
+  padding: 30px;
+}
+
+.panel-body > .blank-state > p {
+  text-align: center;
+  color: $mc-grey-a;
+}
+
+.panel-footer {
+  @include clearfix();
+  padding: 30px;
+  border-radius: 0;
+  border-top: 1px solid $mc-grey-e;
+}
+
+.panel-footer > .pagination {
+  float: right;
+}
+
+.panel table + .panel-footer {
+  border-top: none;
+}

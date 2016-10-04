@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Nexa Rust Slab';
+  src: asset-url('nexa-rust-slab-black-1.woff2') format('woff2'),
+  asset-url('nexa-rust-slab-black-1.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Nexa Rust Script';
+  src: asset-url('nexa-rust-script-3.woff2') format('woff2'),
+  asset-url('nexa-rust-script-3.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Flama';
+  src: asset-url('flama-basic.woff2') format('woff2'),
+  asset-url('flama-basic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Flama';
+  src: asset-url('flama-medium.woff2') format('woff2'),
+  asset-url('flama-medium.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// http://google.github.io/material-design-icons/#icon-font-for-the-web
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: asset-url('material-icons.woff2') format('woff2'),
+  asset-url('material-icons.woff') format('woff');
+}
+
+// http://drinchev.github.io/monosocialiconsfont/
+@font-face {
+  font-family: 'Mono Social Icons';
+  src: asset-url('mono-social-icons.woff2') format('woff2'),
+  asset-url('mono-social-icons.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

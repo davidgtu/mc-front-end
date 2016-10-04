@@ -1,0 +1,38 @@
+<menu data-js-hook="menu">
+  <div class="container gutter-sm-15 gutter-md-40">
+
+    <form class="search-box">
+      <div class="form-group">
+        <div class="input-group">
+          <input id="typeahead" type="text" class="form-control" data-js-hook="typeahead"
+                 placeholder="Search for the perfect gift" autocomplete="off">
+          <div class="input-group-addon"><%= icon_tag 'search' %></div>
+        </div>
+      </div>
+    </form>
+
+    <ul class="nav">
+      <% @categories.each do |category| %>
+          <% active = @category == category %>
+          <li class="category-list-item <%= 'active' if active %>">
+            <%= link_to category, '#' %>
+          </li>
+      <% end %>
+
+      <li class="nav-divider"></li>
+
+      <li class="nav-about-us"><%= link_to 'About Us', '#' %></li>
+      <li class="nav-guarantee"><%= link_to '100% Satisfaction Guarantee', '#' %></li>
+      <li class="nav-instructions"><%= link_to 'Opening Instructions', '#' %></li>
+
+      <li class="nav-divider"></li>
+
+      <li class="nav-phone-number">
+        <%= link_to raw("#{icon_tag('phone')} 1-866-902-7260"), '#' %>
+      </li>
+    </ul>
+
+  </div>
+</menu>
+
+<screen data-js-hook="screen"></screen>

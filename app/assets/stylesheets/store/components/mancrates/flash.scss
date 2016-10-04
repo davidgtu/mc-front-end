@@ -1,0 +1,15 @@
+.flash {
+  width: 100%;
+  margin: 0 auto 0 auto;
+  padding: 0 0;
+}
+
+.flash .alert {
+  width: 100%;
+}
+
+@media (min-width: $min-tablet-width) {
+  .flash {
+    margin-bottom: 30px;
+  }
+}

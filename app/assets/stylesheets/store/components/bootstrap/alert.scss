@@ -1,0 +1,72 @@
+.alert {
+  position: relative;
+  display: table;
+  border: none;
+  box-shadow: none;
+  margin: 0 auto;
+  padding: 0;
+  border-radius: 3px;
+}
+
+.alert > .alert-icon {
+  position: relative;
+  display: table-cell;
+  width: 15%;
+  max-width: 120px;
+  min-width: 76px;
+  height: 100%;
+  border-radius: 3px 0 0 3px;
+  line-height: 1;
+  content: 'warning';
+}
+
+.alert > .alert-icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  margin: -13px 0 0 -13px;
+  font-size: 26px;
+}
+
+.alert > .alert-description {
+  display: table-cell;
+  width: 85%;
+  height: 100%;
+  padding: 15px;
+}
+
+.alert > .alert-description > p:first-child {
+  margin: 0;
+}
+
+.alert-error {
+  color: $mc-white;
+  background: $mc-red;
+}
+
+.alert-error > .alert-icon {
+  background: darken($mc-red, 10%);
+}
+
+.alert-error > .alert-icon > i {
+  color: darken($mc-red, 25%);
+}
+
+.alert-warning {
+  color: darken($mc-yellow, 40%);
+  background: $mc-yellow;
+}
+
+.alert-warning > .alert-icon {
+  background: darken($mc-yellow, 10%);
+}
+
+.alert-warning > .alert-icon > i {
+  color: darken($mc-yellow, 25%);
+}
+
+.alert-success {
+  color: $mc-green-dark;
+  background: $mc-green-light;
+}

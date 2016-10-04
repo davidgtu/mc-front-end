@@ -1,0 +1,250 @@
+<html>
+<head>
+  <style>
+    html, body {
+      font-family: "Helvetica Neue", Arial, "Lucida Grande", sans-serif;
+      line-height: 1.5em;
+      color: #333;
+      padding: 30px 0;
+    }
+
+    h1 {
+      margin: 0 0 40px 0;
+      text-align: center;
+    }
+
+    h2 {
+      padding: 0 0 15px 0;
+      border-bottom: 1px solid #EEE;
+    }
+
+    #container {
+      width: 100%;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    pre {
+      margin: 20px 0;
+      padding: 20px;
+      background: #FAFAFA;
+    }
+
+    code {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    span > code {
+      color: deeppink;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    span.tip > code {
+      color: lightseagreen;
+    }
+
+    img {
+      max-width: 620px;
+    }
+
+  </style>
+</head>
+<body>
+<div id="container">
+  <h1>ManCrates Frontend Simulation</h1>
+
+  <h2>Before Starting</h2>
+
+  <p>The goals of this exercise are to:</p>
+
+  <ul>
+    <li>expose you to real problems that you will be expected to solve daily</li>
+    <li>follow instructions and build UIs with HTML and CSS</li>
+    <li>test your ability to write HTML and CSS according to our guidelines</li>
+  </ul>
+
+  <p>
+    You should approach this project as if it was going to go
+    into production on a high-traffic website immediately after submission
+    where millions of people will see your interfaces on many different devices.
+    Indeed, we are interested in seeing what your standard is for a project
+    like this as a professional engineer.
+  </p>
+
+  <p>
+    We expect that, excluding time taken to set up your system and read the documentation, you should be
+    able to comfortably complete this exercise in roughly 3-4 hours.
+    You should go as fast as you can <u>without sacrificing quality in the submission</u>.
+    We would like to get a complete submission even if it takes a
+    longer than expected or if you want to work on it in parts. To that
+    end you have up to 3 days after receiving the project to finish. As
+    a benchmark, our solution took less than 3 hours to complete in a single
+    sitting and didn't need to modify any models, controllers or javascript.
+  </p>
+
+  <h2>System Requirements & Setup</h2>
+
+  <p>
+    This project requires Ruby 2.3.1. To install ruby we recommend using RVM
+    (https://rvm.io/rvm/install). One you have RVM installed you can run: </p>
+
+  <!-- @formatter:off -->
+  <pre><code>rvm install ruby-2.3.1</code></pre>
+  <!-- @formatter:on -->
+
+
+  <p>After ruby is installed, change into the project's root directory and install all dependencies:</p>
+
+  <!-- @formatter:off -->
+  <pre><code>bundle install</code></pre>
+  <!-- @formatter:on -->
+
+  <p>(If you had trouble with on that step, <a href="#troubleshooting">try this workaround</a>*.)</p>
+
+  <p> After all the dependencies have been installed you should be able to start the server.
+    Everything should already be setup and all you should need to do is run </p>
+
+  <!-- @formatter:off -->
+  <pre><code>rails server</code></pre>
+  <!-- @formatter:on -->
+
+  <p> If you navigate to <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> you should see the
+    page you will see our home page. From the home page you can navigate to our categories page
+    <a href="http://localhost:3000/categories/1">http://localhost:3000/categories/1</a>. This will be the page
+    you are going to implement.
+  </p>
+
+
+  <p>Finally since we have removed the root git repository from the app your final task should be to
+    initialize
+    one and make your first commit.</p>
+
+  <!-- @formatter:off -->
+  <pre><code>git init; git add .; git commit</code></pre>
+  <!-- @formatter:on -->
+
+  <p>At this point you should be good to go! If you run into any issues getting set up, please let us know
+    ASAP.</p>
+
+  <h2>Background</h2>
+
+  <p>
+    The year is 3031, the president of the United States is a man by the name of Burt Herbert and ManCrates
+    is one of the largest companies on the planet. Incredibly ManCrates was able lobby congress into
+    creating a law mandating that marriage licenses would only be given out if both parties exchanged a
+    ManCrates gift instead of rings (or other items). Obviously countries around the world followed suit,
+    orders skyrocketed, and now we need your help building out the new and improved UIs for ManCrates!
+  </p>
+
+  <h2>References</h2>
+
+  <h3>Documentation: Frontend.md</h3>
+  <p>
+    Included under <span><code>docs/FRONTEND.md</code></span> we have included a intro to the way ManCrates
+    organizes, implements and composes CSS and HTML. You should absolutely read it before getting started. If
+    you are a bit weak with CSS there is also a quick link to a website that goes over the fundamentals
+    of CSS layouts. Otherwise the only other documentation you will need will be the
+    <a href="http://getbootstrap.com/" target="_blank">bootstrap V3 docs</a> and perhaps the rails
+    <a href="http://guides.rubyonrails.org/action_view_overview.html" target="_blank">view helper documentation</a>.
+  </p>
+
+  <h3>Implementation: Home Page</h3>
+  <p>
+    We realize that most of the time when developing a project you will have a set of examples to
+    pull and learn from that follow the guides. To that end we have included a version of our homepage that
+    is styled, responsive, and sets an example for what you should be shooting for.
+  </p>
+  <p>
+    If you navigate to <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> you will be able to see it. The
+    relevant styles for that page live
+    <span><code>app/assets/stylesheets/store/views/pages/home.scss</code></span>
+    and the html lives <span><code>app/views/store/pages/home.html.erb</code></span>. As you can see the
+    CSS and the HTML have almost identical paths (this is on purpose).
+  </p>
+
+  <p>
+    If you open up the home.scss file you will immediately see components that are organized together with
+    comment tags such as <span><code>// -- Product Formats --</code></span>. You should strive
+    for a similar level of organization for your final css in your submission.
+  </p>
+
+  <p>
+    You will also notice, just as our FRONTEND.md file mentions, that we break our components into class tags,
+    give semantic names with minimal parent selectors</a>, no <span><code>!important</code></span> calls, and
+    grouped media queries. We will be grading you on how well you can apply those guidelines to your own
+    work as well.
+  </p>
+
+  <h2>Grading Criteria</h2>
+
+  <ul>
+    <li><b>Visual:</b> Mocks and implementation look exactly alike</li>
+    <li><b>Responsive:</b> Supports mobile and desktop beautifully</li>
+    <li><b>CrossBrowser support:</b> Chrome, and Firefox (latest) -- Don't worry about IE</li>
+    <li><b>Style:</b> How well you followed our style guide and reference implementation</li>
+  </ul>
+
+  <p>
+    <b>Note:</b> Timing will not be part of the grading criteria but will be required with your submission. If
+    you are invited back for a team interview there will be a coding exercise and the time given
+    will be proportional to what you reported for the assignment.
+  </p>
+
+  <h2>Before Starting</h2>
+  <ul>
+    <li>Take a read of FRONTEND.md and the homepage implementation</li>
+    <li>Start a timer! Record how long it takes you to do the assignment and include it with your submission</li>
+    <li>If you have questions you can email tim@mancrates.com</li>
+  </ul>
+
+  <h2>Assignment: The Category Page</h2>
+
+  <p>Your task in this simulation is to add HTML & ERB to
+    <span><code>app/views/store/categories/show.html.erb</code></span> and CSS to
+    <span><code>app/assets/stylesheets/store/views/categories/show.scss</code></span>. (Again no JS should
+    be used in the simulation) and very little ruby should be used (<b>absolutely no models or controllers should be
+    built </b>, just view helpers like <span><code>image_tag</code></span> when needed). You can get an idea of
+    what view helpers might be needed from the home.html.erb file.
+  </p>
+
+  <p>
+    We have already done the layout (header, footer, etc) for you so you are not responsible for those parts.
+  </p>
+
+  <p>The mocks you should use as your UI guide can be found under <span><code>mocks/</code></span>. To give
+    you an idea here is the desktop version:</p>
+
+  <img src="mocks/Category-Desktop.png">
+
+  <p>You will need to do both desktop and mobile. Full size versions are in
+  <a href="mocks">the mocks directory</a>. You can fill in the text descriptions using
+  <a href="http://www.lipsum.com/"> Lorum Ipsum </a> for speed</p>
+
+  <p>We have also included a couple example products and their images. You can find them in
+    <span><code>app/assets/images/store/products</code></span>. Feel free to use those for the images. You
+    can repeat them as necessary to file up the page with at least 12 products.
+  </p>
+
+  <p>Since we are not allowing JS here none of the interaction here has to work, it just needs to look
+    exactly like the mocks using HTML, CSS and Rails view helpers.</p>
+
+
+  <h2 id="troubleshooting">Troubleshooting installing nokogiri</h2>
+  <p>Some environments won't run bundle install completely without a hitch the first time. If you get errors, try this:</p>
+  <!-- @formatter:off -->
+  <pre><code>brew uninstall xz</code></pre>
+  <pre><code>gem install nokogiri -v 1.6.8</code></pre>
+  <pre><code>bundle install</code></pre>
+  <!-- @formatter:on -->
+
+  <p>
+    (<a href="https://github.com/sparklemotion/nokogiri/issues/1483">Longer explaination of why that might work</a>,
+    and also <a href="http://www.nokogiri.org/tutorials/installing_nokogiri.html#mac_os_x">nokogiri's docs</a> on installation.)
+  </p>
+
+</div>
+</body>
+</html>

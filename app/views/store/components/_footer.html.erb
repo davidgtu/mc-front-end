@@ -1,0 +1,119 @@
+<section class="billboard guarantee">
+  <div class="billboard-content">
+    <h2 class="billboard-headline">100% Satisfaction Guaranteed</h2>
+    <%= link_to 'Learn More', '#', class: 'btn btn-md btn-primary btn-outline btn-md-wide' %>
+  </div>
+</section>
+
+<section class="billboard wise-guy">
+  <div class="billboard-content">
+    <h4 class="billboard-headline">
+      <span>No man</span> has ever gotten an artful arrangement of fruit and said
+      "Holy moly, it's exactly what I wanted!"
+    </h4>
+  </div>
+</section>
+
+<footer>
+  <div class="container gutter-xs-15 gutter-sm-30 gutter-md-40">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-cta">
+          <%= image_tag 'shared/logos/logo-white-300x123.png', class: 'mc-logo' %>
+        </div>
+
+        <ul class="nav hidden-xs">
+          <li>
+            <%= link_to 'Our Story', '#' %>
+          </li>
+          <li>
+            <%= link_to 'Our Blog', '#' %>
+          </li>
+          <li>
+            <%= link_to 'Careers', '#' %>
+          </li>
+          <li>
+            <%= link_to 'Press', '#' %>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="footer-cta">
+          <%= link_to 'Help me choose a gift', '#', class: 'btn btn-primary btn-block btn-md btn-outline' %>
+          <p>Chat with a Concierge, they're here to help!</p>
+        </div>
+
+        <ul class="nav footer-nav">
+          <li>
+            <%= link_to 'All Gifts', '#' %>
+          </li>
+          <li>
+            <%= link_to "Father's Day Gifts", '#' %>
+          </li>
+          <li>
+            <%= link_to 'Christmas Gifts', '#' %>
+          </li>
+          <li>
+            <%= link_to "Valentine's Day Gifts", '#' %>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="footer-cta">
+          <%= link_to ManCrates::CS_PHONE_NUMBER, "tel:#{ManCrates::CS_PHONE_NUMBER}",
+                      class: 'btn btn-secondary btn-md btn-outline btn-block' %>
+          <p>Give us a call! We're standing by 7 days a week, 9am-6pm PT.</p>
+        </div>
+
+        <ul class="nav footer-nav">
+          <li>
+            <%= link_to 'FAQs', '#' %>
+          </li>
+          <li>
+            <%= link_to 'Shipping Info', '#' %>
+          </li>
+          <li>
+            <%= link_to 'Return Policy', '#' %>
+          </li>
+          <li>
+            <%= link_to '100% Satisfaction Guarantee', '#' %>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 col-md-push-8">
+        <div class="social">
+          <ul class="social-icon-list clearfix">
+            <li class="social-icon-list-item">
+              <%= link_to social_icon_tag('facebook'), ManCrates::FACEBOOK_URL, class: 'social-icon-link' %>
+            </li>
+            <li class="social-icon-list-item">
+              <%= link_to social_icon_tag('pinterest'), ManCrates::PINTEREST_URL, class: 'social-icon-link' %>
+            </li>
+            <li class="social-icon-list-item">
+              <%= link_to social_icon_tag('twitterbird'), ManCrates::TWITTER_URL, class: 'social-icon-link' %>
+            </li>
+            <li class="social-icon-list-item">
+              <%= link_to social_icon_tag('youtube'), ManCrates::YOUTUBE_URL, class: 'social-icon-link' %>
+            </li>
+            <li class="social-icon-list-item">
+              <%= link_to social_icon_tag('instagram'), ManCrates::INSTAGRAM_URL, class: 'social-icon-link' %>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-8 col-md-pull-4">
+        <p class="legal">
+          &copy; <%= Date.today.year %> Man Crates. All rights reserved. Please read our
+          <%= link_to 'Terms of Service', '#' %> and
+          <%= link_to 'Privacy Policy', '#' %>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>

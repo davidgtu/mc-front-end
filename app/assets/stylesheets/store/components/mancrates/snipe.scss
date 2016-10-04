@@ -1,0 +1,38 @@
+.snipe {
+  position: absolute;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.snipe-flat {
+  padding: 2px 16px;
+}
+
+.snipe-angled {
+  padding: 2px 80px;
+}
+
+.snipe-angled-left {
+  @include rotate(-45);
+}
+
+.snipe-angled-right {
+  @include rotate(45);
+}
+
+.snipe-green {
+  color: $mc-green-dark;
+  background: $mc-green-light;
+}
+
+.snipe-blue {
+  color: $mc-white;
+  background: $mc-blue-medium;
+}
+
+.snipe-orange {
+  color: $mc-white;
+  background: $mc-orange;
+}

@@ -1,0 +1,70 @@
+html {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  overflow-y: scroll;
+}
+
+header {
+  position: relative;
+  flex: none;
+}
+
+menu {
+  flex: none;
+}
+
+main {
+  @include flex(1);
+  position: relative;
+  z-index: 100;
+}
+
+section {
+  flex: none;
+}
+
+footer {
+  position: relative;
+  flex: none;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+@include media(tablet) {
+
+  .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+}
+
+@include media(desktop) {
+
+  .container {
+    max-width: $container-max-width;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+}
+
+header .container,
+menu .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="turbolinks-cache-control" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,
+                                user-scalable=no, shrink-to-fit=no"/>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title><%= yield :title || 'Man Crates' %></title>
+
+  <%= stylesheet_link_tag 'store', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'store', 'data-turbolinks-track': 'reload' %>
+
+  <%= csrf_meta_tags %>
+  <%= content_for :head %>
+</head>
+<body data-view="<%= view_name %>" data-layout="store">
+<%= render 'store/components/header' %>
+<%= render 'store/components/menu' %>
+<%= render 'store/components/top_banner' %>
+<%= render 'store/components/main' %>
+<%= render 'store/components/bottom_banner' %>
+<%= render 'store/components/footer' %>
+</body>
+</html>

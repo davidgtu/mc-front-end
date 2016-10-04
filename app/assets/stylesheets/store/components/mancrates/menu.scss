@@ -1,0 +1,156 @@
+// scss-lint:disable SelectorDepth, QualifyingElement
+//
+// SelectorDepth is disabled because Bootstrap itself has selectors with depth > 3, thus we must
+// do the same to have a higher specificity without resorting to !important
+//
+// QualifyingElement is disabled because menu is an HTML component
+
+$menu-width-mobile: 280px;
+$menu-height-desktop: 60px;
+$menu-nav-item-height-mobile: 44px;
+$menu-nav-item-height-desktop: 60px;
+
+menu {
+  @include transition(left 100ms ease-out);
+  position: fixed;
+  top: $header-height-mobile;
+  bottom: 0;
+  left: -$menu-width-mobile;
+  right: auto;
+  max-width: $menu-width-mobile;
+  margin: 0;
+  padding: 0;
+  background: $mc-grey-4;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+menu.in {
+  display: block;
+  left: 0;
+}
+
+menu .search-box {
+  position: static;
+  margin: 15px 0;
+}
+
+menu .nav {
+  margin: 0;
+  padding: 0;
+}
+
+menu .nav > li {
+  height: $menu-nav-item-height-mobile;
+  margin: 0;
+  list-style: none;
+}
+
+menu .nav > li > a {
+  @include transition(background 150ms ease-out, color 150ms ease-out);
+  display: block;
+  height: $menu-nav-item-height-mobile;
+  margin: 0 -15px;
+  padding: 0 15px;
+  color: $mc-white;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: $menu-nav-item-height-mobile;
+}
+
+menu .nav > li > a > i {
+  position: relative;
+}
+
+menu .nav > li > a:hover {
+  background: $mc-grey-5;
+  text-decoration: none;
+}
+
+menu .nav > li > a:active {
+  background: $mc-grey-9;
+}
+
+menu .nav > .active a {
+  color: $mc-grey-4;
+  background: $mc-white;
+}
+
+menu .nav > .nav-divider {
+  margin: 15px -15px;
+  background: $mc-grey-5;
+}
+
+menu .nav > .nav-phone-number i {
+  margin: 0 10px 0 0;
+  font-size: 20px;
+}
+
+@include media(desktop) {
+
+  menu {
+    position: static;
+    max-width: 100%;
+    height: $menu-height-desktop;
+    display: block;
+    overflow-y: visible;
+  }
+
+  menu .search-box {
+    position: absolute;
+    top: -70px;
+    left: 160px;
+    z-index: 1001; // so it appears in the header
+  }
+
+  menu .nav {
+    height: $menu-height-desktop;
+  }
+
+  menu .nav > li {
+    height: $menu-height-desktop;
+    float: left;
+    margin: 0;
+    padding: 0;
+  }
+
+  menu .nav > li > a {
+    height: $menu-height-desktop;
+    margin: 0;
+    padding: 0 20px;
+    line-height: $menu-height-desktop;
+  }
+
+  menu .nav > .nav-phone-number {
+    float: right;
+  }
+
+  menu .nav > .nav-phone-number > a {
+    text-align: right;
+    padding: 0;
+
+    &:hover {
+      color: $mc-orange;
+      background: $mc-grey-4;
+    }
+  }
+
+  menu .nav-log-in,
+  menu .nav-account,
+  menu .nav-sign-up,
+  menu .nav-about-us,
+  menu .nav-guarantee,
+  menu .nav-instructions,
+  menu .nav-divider {
+    display: none;
+  }
+
+}
+
+// From 1025-992px wide, the menu bumps the phone number off the screen.
+@media (min-width: 992px) and (max-width: 1047px) {
+  menu .nav > li > a {
+    padding: 0 16px;
+  }
+}

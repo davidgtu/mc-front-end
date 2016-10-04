@@ -1,0 +1,304 @@
+[data-view="pages/home"] {
+
+  // -- Hero --
+
+  .hero {
+    background-image: url(image-path('store/components/hero-backgrounds/hero-bg-canoe.jpg'));
+    background-position: center right;
+  }
+
+  .hero-sub-headline {
+    font-family: $mc-nexa-script;
+  }
+
+  @include media(mobile) {
+
+    .hero {
+      height: auto;
+    }
+
+  }
+
+  @include media(tablet) {
+
+    .hero {
+      height: 380px;
+    }
+
+  }
+
+  @include media(desktop) {
+
+    .hero {
+      height: 480px;
+
+    }
+
+  }
+
+  // -- Main Headline --
+
+  .main-headline {
+    text-align: center;
+  }
+
+  .main-headline-text {
+    display: inline-block;
+    margin: 0;
+    font-family: $mc-nexa-slab;
+    text-transform: uppercase;
+    color: $mc-black;
+  }
+
+  @include media(mobile) {
+
+    .main-headline {
+      margin: 5px 0 20px 0;
+    }
+
+    .main-headline .banner {
+      display: none;
+    }
+
+    .main-headline-text {
+      font-size: 18px;
+    }
+
+  }
+
+  @include media(tablet) {
+
+    .main-headline {
+      margin-bottom: 30px;
+    }
+
+    .main-headline-text {
+      font-size: 30px;
+    }
+
+  }
+
+  @include media(desktop) {
+
+    .main-headline {
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+
+    .main-headline-text {
+      font-size: 40px;
+    }
+
+  }
+
+  // -- Product Formats --
+
+  .product-format a {
+    display: block;
+  }
+
+  .product-format img {
+    width: 100%;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @include media(mobile) {
+
+    .product-format-list {
+      margin: 15px auto 0;
+    }
+
+    .product-format {
+      margin-bottom: 15px;
+    }
+
+    .product-format-project-kits {
+      margin-bottom: 0;
+    }
+
+  }
+
+  @include media(tablet) {
+
+    .product-format-list {
+      margin: 30px auto 0;
+    }
+
+    .product-format-crates {
+      margin: 0 15px 15px 0;
+    }
+
+    .product-format-ammo-cans {
+      margin: 0 0 15px 15px;
+    }
+
+    .product-format-jerkygrams {
+      margin: 15px 15px 0 0;
+    }
+
+    .product-format-project-kits {
+      margin: 15px 0 0 15px;
+    }
+
+  }
+
+  @include media(desktop) {
+
+    .product-format-list {
+      margin: 40px auto 0;
+    }
+
+    .product-format-crates {
+      margin: 0 20px 20px 0;
+    }
+
+    .product-format-ammo-cans {
+      margin: 0 0 20px 20px;
+    }
+
+    .product-format-jerkygrams {
+      margin: 20px 20px 0 0;
+    }
+
+    .product-format-project-kits {
+      margin: 20px 0 0 20px;
+    }
+
+  }
+
+  // -- Manifesto --
+
+  .manifesto {
+    background: $mc-grey-e;
+    text-align: center;
+  }
+
+  .manifesto-headline {
+    text-align: center;
+    color: $mc-grey-4;
+    font-family: $mc-nexa-script;
+  }
+
+  .manifesto-description {
+    font-size: 20px;
+    line-height: 40px;
+    letter-spacing: -0.09px;
+    color: $mc-grey-6;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+
+  @include media(mobile) {
+
+    .manifesto-headline {
+      margin: 12px 0 20px 0;
+      font-size: 30px;
+    }
+
+    .manifesto-description {
+      margin: 15px;
+      line-height: 30px;
+    }
+
+  }
+
+  @include media(tablet) {
+
+    .manifesto-headline {
+      margin: 10px 0 20px 0;
+      font-size: 30px;
+    }
+
+    .manifesto-description {
+      margin: 0 auto 20px auto;
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+  }
+
+  @include media(desktop) {
+
+    .manifesto-headline {
+      margin: 20px 0 30px 0;
+      font-size: 40px;
+    }
+
+    .manifesto-description {
+      max-width: 980px;
+      margin: 0 auto 20px auto;
+      font-size: 25px;
+      line-height: 38px;
+    }
+
+  }
+
+  // -- Mailing List --
+
+  .mailing-list {
+    background-image: url(image-path('store/components/hero-backgrounds/hero-bg-canyonlands.jpg'));
+    background-size: cover;
+    background-position: center;
+    border-bottom: 1px solid $mc-white;
+    text-align: center;
+  }
+
+  .mailing-list-headline {
+    font-family: $mc-nexa-slab;
+
+    text-transform: uppercase;
+    color: $mc-white;
+  }
+
+  .mailing-list-description {
+    color: $mc-white;
+    padding: 0 20px 20px;
+  }
+
+  @include media(mobile) {
+
+    .mailing-list .btn-md-wide {
+      width: 100%;
+    }
+
+    .mailing-list {
+      background-color: $mc-grey-2;
+      background-image: none;
+      border-bottom: 1px solid $mc-grey-3;
+    }
+
+    .mailing-list-headline {
+      padding-top: 0;
+      font-size: 22px;
+    }
+
+  }
+
+  @include media(tablet) {
+
+    .mailing-list {
+      height: 280px;
+    }
+
+    .mailing-list-headline {
+      font-size: 24px;
+    }
+
+  }
+
+  @include media(tablet-desktop) {
+
+    .mailing-list {
+      height: 280px;
+    }
+
+    .mailing-list-headline {
+      font-size: 30px;
+    }
+
+  }
+
+}

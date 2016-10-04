@@ -1,0 +1,35 @@
+.social-icon-list {
+  width: 290px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.social-icon-list-item {
+  float: left;
+  margin: 0;
+  list-style: none;
+}
+
+.social-icon-link {
+  display: block;
+  width: 58px;
+  height: 58px;
+}
+
+.social-icon-link:hover {
+  text-decoration: none;
+}
+
+.social-icon-link > i {
+  color: $mc-white;
+  display: block;
+  width: 58px;
+  height: 58px;
+  font-size: 60px;
+  line-height: 58px;
+  text-align: center;
+}
+
+.social-icon-link:hover > i {
+  color: $mc-orange;
+}

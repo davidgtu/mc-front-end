@@ -1,0 +1,41 @@
+<!-- <%= 'IMPLEMENT ME' %> -->
+<!-- <div class="hero-test">The best gifts for the best men in the world</div> -->
+
+<%= content_for :top_banner do %>
+  <section class="world best-gift">
+      <h1 class="world-headline">The best gifts for men in the world</h1>
+      <p class="world-description">We stuff our crates with snacks, gadgets,
+      gears, and videogames. Then we seal them up tight and ship them without
+      a crowbar. Have you ever opened a present with a crowbar? It's pretty
+      awesome. So awesome that all our crates come with a high-five
+      guarantee.</p>
+  </section>
+
+  <nav class="world filter navbar navbar-default">
+      <div class="container-fluid filter-container">
+          <div class="navbar-header filter-price-container">
+              <span class="navbar-brand filter-by">Filter by</span>
+              <span class="navbar-header filter-products">84 products</span>
+              <button class="btn filter-price btn-filter btn-md-tall" type="button">$0 - $50</button>
+              <button class="btn filter-price btn-filter btn-md-tall" type="button">$50 -$99</button>
+              <button class="btn filter-price btn-filter btn-md-tall" type="button">$100+</button>
+          </div>
+          <div class="filter-link-container"><i class="material-icons filter-link-icon">view_module</i><a href="#" class="filter-link">Filter</a></div>
+
+          <!-- <div class="filter-link-container"><i class="material-icons filter-link-icon">view_module</i><a href="#">Filter</a></div> -->
+          <div class="navbar-header filter-add-container">
+              <div class="btn-group">
+                  <button class="btn filter-add btn-filter btn-lg-tall filter-add-title" data-target="#rep-filter-card" data-toggle="collapse">Add Filters</button>
+                  <button class="btn filter-add btn-filter btn-lg-tall filter-add-prompt">
+                    <span aria-hidden="true" class="glyphicon glyphicon-plus"></span>
+                  </button>
+                  <div class="filter-clear"><a href="#">clear filters</a></div>
+              </div>
+          </div>
+
+          <div class=filter-showing-container>
+            <span class="filter-showing">Showing 84 products</span>
+          </div>
+      </div><!-- /.container-fluid -->
+  </nav>
+<% end %>

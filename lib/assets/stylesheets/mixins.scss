@@ -1,0 +1,118 @@
+// scss-lint:disable VendorPrefix
+
+// Mixins
+//
+// If you need a mixin that doesn't exist below, we recommend copying a mixin from an existing library
+// rather than reimplementing it yourself.
+//
+// Good places to pull from:
+//
+// https://github.com/thoughtbot/bourbon
+// https://github.com/matthieua/sass-css3-mixins
+
+// Clearfix: force an element to clear itself
+@mixin clearfix() {
+  &::after {
+    content: '\0020';
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+  }
+}
+
+// Media: a DRY way to use media queries
+// @param {*} $type Type
+@mixin media($type) {
+
+  @if $type == desktop {
+
+    @media only screen and (min-width: 992px) {
+      @content;
+    }
+
+  } @else if $type == mobile {
+
+    @media only screen and (max-width: 767px) {
+      @content;
+    }
+
+  } @else if $type == tablet {
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+
+  } @else if $type == mobile-tablet {
+
+    @media only screen and (max-width: 991px) {
+      @content;
+    }
+
+  } @else if $type == tablet-desktop {
+
+    @media only screen and (min-width: 768px) {
+      @content;
+    }
+
+  }
+}
+
+// Prefix: adds a browser prefix to the property
+// @param {*} $property Property
+// @param {*} $value Value
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+// Opacity
+// @param {Double} $opacity [0.5] - Opacity
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity = $opacity-ie); //IE8
+}
+
+// Rotate
+// CSS Matrix Rotation Calculator http://www.boogdesign.com/examples/transforms/matrix-calculator.html
+// @param {Double} $deg [0] - Degree
+// @param {Double} $m11 [0] - M11
+// @param {Double} $m12 [0] - M12
+// @param {Double} $m21 [0] - M21
+// @param {Double} $m22 [0] - M22
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+  @include prefix('transform', rotate($deg + deg));
+  filter: progid:DXImageTransform.Microsoft.Matrix(
+                  M11=#{$m11}, M12=#{$m12}, M21=#{$m21}, M22=#{$m22}, sizingMethod='auto expand');
+  zoom: 1;
+}
+
+// Transform
+// @param {List} $params - Params
+@mixin transform($params) {
+  @include prefix('transform', $params);
+}
+
+// Transition
+// @param {List} $properties - Properties
+@mixin transition($properties...) {
+  @if length($properties) >= 1 {
+    @include prefix('transition', $properties);
+  } @else {
+    @include prefix('transition', 'all 0.2s ease-in-out 0s');
+  }
+}
+
+// Flex
+// @param {Integer} $value - Value
+@mixin flex($value) {
+  -webkit-flex: $value; // Safari 6.1+
+  -ms-flex: $value; // IE 10
+  flex: $value;
+}

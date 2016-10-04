@@ -1,0 +1,69 @@
+<%= content_for :top_banner do %>
+  <section class="hero awesome-gifts">
+    <div class="hero-sub-headline">We do</div>
+    <h1 class="hero-headline">Awesome Gifts For Men</h1>
+    <%= link_to 'Shop All Gifts', category_path('gifts-for-men'),
+                class: 'btn btn-lg btn-lg-wide btn-lg-tall btn-primary btn-hero-cta' %>
+  </section>
+<% end %>
+
+<div class="main-headline">
+  <span class="banner banner-left"></span>
+  <h2 class="main-headline-text">Give the Perfect Gift</h2>
+  <span class="banner banner-right"></span>
+</div>
+
+
+<div class="product-format-list">
+  <div class="row gutter-xs-0">
+    <div class="col-sm-6">
+      <div class="product-format product-format-crates">
+        <%= link_to(image_tag('store/components/product-formats/product-format-crates.jpg', alt: 'Wooden Crates'), category_path('gifts-for-men')) %>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="product-format product-format-ammo-cans">
+        <%= link_to(image_tag('store/components/product-formats/product-format-ammo-cans.jpg', alt: 'Ammo Cans'), category_path('alcohol-gifts')) %>
+      </div>
+    </div>
+  </div>
+  <div class="row gutter-xs-0">
+    <div class="col-sm-6">
+      <div class="product-format product-format-jerkygrams">
+        <%= link_to(image_tag('store/components/product-formats/product-format-jerkygrams.jpg', alt: 'Jerkygrams'), category_path('alcohol-gifts')) %>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="product-format product-format-project-kits">
+        <%= link_to(image_tag('store/components/product-formats/product-format-project-kits.jpg', alt: 'Project Kits'), category_path('personalized-gifts')) %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :bottom_banner do %>
+
+  <div class="manifesto">
+    <div class="container">
+      <h3 class="manifesto-headline">Our Manifesto</h3>
+      <p class="manifesto-description">
+        We believe men deserve <strong>better gifts</strong>. Gifts that stir a primal craze of chest
+        bumps and cheers, not polite half-smiles. We believe gifts should be just as
+        <strong>exciting</strong> to give as they are to receive; the gifts of water cooler legend. We are
+        <strong>Man Crates</strong>, and we do <strong>awesome gifts for men</strong>.</p>
+    </div>
+  </div>
+
+  <div class="mailing-list">
+    <div class="container">
+
+      <h2 class="mailing-list-headline">News from the front</h2>
+      <p class="mailing-list-description">
+        Sign up for our newsletter to receive exclusive offers and savings
+      </p>
+      <button class="btn btn-md btn-secondary btn-outline btn-md-wide">Subscribe</button>
+
+    </div>
+  </div>
+
+<% end %>
