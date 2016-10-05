@@ -1,8 +1,5 @@
 [data-view="categories/show"] {
 
-  // IMPLEMENT ME
-
-
   // -- World --
 
   @include media(mobile) {
@@ -152,10 +149,6 @@
 
   // -- Item --
 
-  .item-format img {
-    width: 430px;
-  }
-
   .item-format-list {
     display: flex;
     flex-wrap: wrap;
@@ -163,15 +156,97 @@
   }
 
   .item-format {
-    margin: 7px;
+    margin: 10px;
   }
 
   .item-price {
     color: $mc-price-color;
   }
 
-  .item-title {
+  .item-title,
+  .item-description-headline {
     font-weight: bolder;
+    text-transform: capitalize;
+  }
+
+  .item-new {
+    color: $mc-orange;
+    font-weight: bolder;
+  }
+
+  .item-information {
+    display: inline-flex;
+    align-items: center;
+    width: 195px;
+    justify-content: space-between;
+  }
+
+  @include media(mobile){
+
+    .item-format {
+      width: 290px;
+      border-bottom: 1px solid $mc-grey-d;
+    }
+
+    .item-title {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .item-information {
+      margin-top: -8px;
+      margin-bottom: 8px;
+    }
+
+    .item-price {
+      font-size: 17px;
+    }
+
+    .item-description-headline {
+      font-size: 16px;
+    }
+
+    .item-description {
+      font-size: 15px;
+    }
+
+    .item-view-btn {
+      width: 290px;
+      height: 45px;
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+
+    .item-format img {
+      width: 290px;
+    }
+
+  }
+
+  @include media(desktop){
+
+    .item-format {
+      width: 432px;
+    }
+
+    .item-format img {
+      width: 430px;
+    }
+
+    .item-description-headline {
+      font-size: 17px;
+    }
+
+    .item-new {
+      font-size: 18px;
+    }
+
+    .item-view-btn {
+      width: 432px;
+      height: 55px;
+      font-size: 20px;
+    }
+
   }
 
 }
