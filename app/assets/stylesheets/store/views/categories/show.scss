@@ -150,5 +150,28 @@
     }
   }
 
+  // -- Item --
+
+  .item-format img {
+    width: 430px;
+  }
+
+  .item-format-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .item-format {
+    margin: 7px;
+  }
+
+  .item-price {
+    color: $mc-price-color;
+  }
+
+  .item-title {
+    font-weight: bolder;
+  }
 
 }
