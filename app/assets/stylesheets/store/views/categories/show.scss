@@ -214,6 +214,10 @@
     justify-content: center;
   }
 
+  .item-format img {
+    width: 100%;
+  }
+
   .item-price {
     color: $mc-price-color;
   }
@@ -286,14 +290,14 @@
   }
 
   .item-format {
-    margin: 14px;
+    margin: 8px;
     width: 31%;
   }
 
   @include media(mobile) {
 
     .item-format {
-      width: 290px;
+      width: 100%;
       border-bottom: 1px solid $mc-grey-d;
     }
 
@@ -307,10 +311,6 @@
 
   }
 
-  .item-format img {
-    width: 100%;
-  }
-
   .item-view-btn {
     width: 100%;
   }
@@ -319,7 +319,7 @@
 
     .item-view-btn {
       height: 45px;
-      margin-bottom: 15px;
+      margin-bottom: 13px;
     }
 
   }
