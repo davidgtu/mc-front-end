@@ -9,14 +9,17 @@
   }
 
   @include media(mobile) {
+
     .world-headline {
       width: 84%;
       margin: 0 auto;
       font-size: 26px;
     }
+
   }
 
   @include media(mobile) {
+
     .world {
       margin-top: 25px;
     }
@@ -24,9 +27,11 @@
     .world-description {
       display: none;
     }
+
   }
 
   @include media(desktop) {
+
     .world {
       margin-top: 60px;
     }
@@ -38,6 +43,7 @@
       margin: 0 auto;
       line-height: 1.5
     }
+
   }
 
   // -- Filter --
@@ -82,11 +88,6 @@
     font-weight: bolder;
   }
 
-  .filter-price-container {
-    border-right: 1px solid $mc-grey-c;
-  }
-
-  
   .filter {
     background: rgb(224, 224, 224);
   }
@@ -105,6 +106,7 @@
   }
 
   @include media(mobile){
+
     .filter {
       padding: 8px;
     }
@@ -113,23 +115,26 @@
       font-size: 13px;
     }
 
-    .filter-by{
+    .filter-by {
       display: none;
     }
 
-    .filter-link-container{
+    .filter-link-container {
       margin-left: auto;
       top: 2px;
     }
+
   }
 
 
-  @include media(desktop){
+  @include media(desktop) {
+
     .filter {
       padding: 15px;
     }
 
-    .filter-products {
+    .filter-products,
+    .filter-link-container {
       display: none;
     }
 
@@ -137,16 +142,19 @@
       margin-right: 10px;
     }
 
-    .filter-link-container {
-      display: none;
-    }
   }
 
 
-  @include media(mobile){
+  .filter-price-container {
+    border-right: 1px solid $mc-grey-c;
+  }
+
+  @include media(mobile) {
+
     .filter-price-container {
       border-right-style: none;
     }
+
   }
 
   .filter-showing-container {
@@ -156,28 +164,35 @@
     margin-top: 15px;
   }
 
-  @include media(mobile){
+  @include media(mobile) {
+
     .filter-showing-container {
       display: none;
     }
+
   }
 
   @include media(mobile) {
+
     .filter-by,
     .filter-price {
       display: none;
     }
+
   }
 
-  @include media(desktop){
+  @include media(desktop) {
+
     .filter-by,
     .filter-price {
       margin-right: 10px;
     }
+
   }
 
 
   @include media(mobile) {
+
     .btn-filter,
     .filter-add-container {
       display:none
@@ -188,6 +203,7 @@
       justify-content: space-between;
       align-items: flex-end;
     }
+
   }
 
   // -- Item --
@@ -215,6 +231,7 @@
   }
 
   @include media(mobile) {
+
     .item-title {
       font-size: 20px;
       margin-top: 10px;
@@ -226,9 +243,11 @@
   }
 
   @include media(desktop) {
+
     .item-description-headline {
       font-size: 17px;
     }
+
   }
 
   .item-new {
@@ -237,9 +256,11 @@
   }
 
   @include media(desktop) {
+
     .item-new {
       font-size: 18px;
     }
+
   }
 
   .item-information {
@@ -250,10 +271,12 @@
   }
 
   @include media(mobile) {
+
     .item-information {
       margin-top: -8px;
       margin-bottom: 8px;
     }
+
   }
 
   .item-format {
@@ -261,25 +284,32 @@
   }
 
   @include media(mobile) {
+
     .item-format {
       width: 290px;
       border-bottom: 1px solid $mc-grey-d;
     }
+
   }
 
   @include media(desktop) {
+
     .item-format {
       width: 432px;
     }
+
   }
 
-  @include media(mobile){
+  @include media(mobile) {
+
     .item-description {
       font-size: 15px;
     }
+
   }
 
-  @include media(mobile){
+  @include media(mobile) {
+
     .item-format img {
       width: 290px;
     }
@@ -290,9 +320,11 @@
       font-size: 16px;
       margin-bottom: 15px;
     }
+
   }
 
-  @include media(desktop){
+  @include media(desktop) {
+
     .item-format img {
       width: 430px;
     }
@@ -302,5 +334,6 @@
       height: 55px;
       font-size: 20px;
     }
+
   }
 }
